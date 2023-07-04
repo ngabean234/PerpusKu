@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 /// ```dart
 // class AppColors extends MHAppColors {
 //   @override
-//   Color get anchor => const Color(0xFFFFAAFF);
 // }
 /// ```
 abstract class MHAppColors {
@@ -22,4 +21,8 @@ abstract class MHAppColors {
   Color get salt => const Color(0xFF000080);
   Color get peacock => const Color(0xFF007FFF);
   Color get lace => const Color(0xFFABCDEF);
+  Color get fossil => const Color(0xFFFFC107);
+  Color get crimson => const Color(0xFFFF0000);
+  Color get bumblebee => const Color(0xFFFFFF00);
+  Color get ash => const Color(0xFF808080);
 }

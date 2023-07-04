@@ -1,32 +1,28 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 
 class IsiProfileScreen extends StatelessWidget {
-
-  const IsiProfileScreen({
-    Key? key,
-  }) : super(key: key);
+  const IsiProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment(0, -1),
-          end: Alignment(0, 1),
-          colors: [
-            Color.fromRGBO(29, 106, 161, 1),
-          ],
-          stops:[
-            0,
-          ],
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment(0, -1),
+            end: Alignment(0, 1),
+            colors: [
+              Color.fromRGBO(29, 106, 161, 1),
+            ],
+            stops: [
+              0,
+            ],
+          ),
         ),
-      ),
-      child: Scaffold(
-        backgroundColor: Color(0x00000000),
-        body: SafeArea(
+        child: SafeArea(
           bottom: false,
           child: ListView(
             padding: EdgeInsets.only(
@@ -42,265 +38,187 @@ class IsiProfileScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(
-                        right: 278,
-                      ),
+                      padding: EdgeInsets.only(right: 278),
                       child: IconButton(
                         iconSize: 32,
                         padding: EdgeInsets.zero,
                         icon: Image.asset(
-                          'assets/images/frame110.png',
+                          'assets/images/frame19.png',
                         ),
                         onPressed: () {},
-                        constraints: BoxConstraints(),
                       ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: 68,
-                        right: 68,
-                      ),
-                      child: Text(
-                        'lengkapi_profil_anda'.tr(),
-                        style: appTextStyles.textStyle15(color: appColors.black),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 11,
-                    ),
-                    LimitedBox(
-                      maxHeight: 132,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          left: 105,
-                          right: 73,
-                        ),
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 0,
-                              top: 0,
-                              right: 0,
-                              bottom: 0,
-                              child: AspectRatio(
-                                aspectRatio: 144 / 132,
-                                child: Image.asset(
-                                  'assets/images/ellipse3.png',
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 0,
-                              top: 0,
-                              right: 0,
-                              bottom: 0,
-                              child: AspectRatio(
-                                aspectRatio: 144 / 132,
-                                child: Image.asset(
-                                  'assets/images/ellipse4.png',
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 39,
                     ),
                     Container(
-                      padding: EdgeInsets.only(
-                        left: 11,
-                        top: 8,
-                      ),
-                      decoration: BoxDecoration(
-                        color: appColors.bone,
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      ),
-                      margin: EdgeInsets.only(
-                        left: 33,
-                        right: 4,
-                      ),
+                      alignment: Alignment.center,
                       child: Column(
                         children: [
+                          SizedBox(height: 0),
                           Padding(
-                            padding: EdgeInsets.only(
-                              left: 2,
-                              right: 41,
-                            ),
-                            child: TextField(
-                              style: appTextStyles.textStyle16(color: appColors.black),
-                              decoration: InputDecoration(
-                                labelText: 'provinsi_kota_kecamatan_kode_pos'.tr(),
-                                labelStyle: appTextStyles.textStyle16(color: appColors.black),
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 36,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              left: 2,
-                              right: 62,
-                            ),
-                            child: TextField(
-                              style: appTextStyles.textStyle16(color: appColors.black),
-                              decoration: InputDecoration(
-                                labelText: 'nama_jalan_gedung_no_rumah'.tr(),
-                                labelStyle: appTextStyles.textStyle16(color: appColors.black),
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 35,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              left: 2,
-                            ),
-                            child: TextField(
-                              style: appTextStyles.textStyle16(color: appColors.black),
-                              decoration: InputDecoration(
-                                labelText: 'detail_lain_cth_blok__uni_no_patokan'.tr(),
-                                labelStyle: appTextStyles.textStyle16(color: appColors.black),
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 35,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              right: 102,
-                            ),
-                            child: TextField(
-                              style: appTextStyles.textStyle16(color: appColors.black),
-                              decoration: InputDecoration(
-                                labelText: 'atur_sebagai_alamat_utama'.tr(),
-                                labelStyle: appTextStyles.textStyle16(color: appColors.black),
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 17,
-                    ),
-                    LimitedBox(
-                      maxHeight: 148,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          left: 33,
-                        ),
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 0,
-                              top: 0,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: appColors.bone,
-                                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                                ),
-                                width: 285,
-                                height: 35,
-                              ),
-                            ),
-                            Positioned(
-                              right: 19,
-                              bottom: 0,
+                            padding: EdgeInsets.only(left: 35),
+                            child: Center(
                               child: Text(
-                                'string_name'.tr(),
-                                style: appTextStyles.textStyle17(color: appColors.daisy),
-                                textAlign: TextAlign.left,
-                              ),
-                            ),
-                            Positioned(
-                              left: 0,
-                              top: 52,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: appColors.bone,
-                                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                                'Lengkapi Profil Anda',
+                                style: appTextStyles.textStyle15(
+                                  color: appColors.black,
                                 ),
-                                width: 285,
-                                height: 35,
+                                textAlign: TextAlign.center,
                               ),
                             ),
-                            Positioned(
-                              left: 0,
-                              right: 0,
-                              bottom: 9,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                          ),
+                          SizedBox(height: 11),
+                          LimitedBox(
+                            maxHeight: 132,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 105, right: 73),
+                              child: Stack(
                                 children: [
-                                  Container(
-                                    padding: EdgeInsets.only(
-                                      left: 11,
-                                      top: 9,
-                                      right: 11,
-                                      bottom: 9,
+                                  Positioned.fill(
+                                    child: AspectRatio(
+                                      aspectRatio: 144 / 132,
+                                      child: Image.asset(
+                                        'assets/images/ellipse3.png',
+                                        fit: BoxFit.fill,
+                                      ),
                                     ),
-                                    decoration: BoxDecoration(
-                                      color: appColors.bone,
-                                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.only(),
-                                          decoration: BoxDecoration(
-                                            color: appColors.black,
-                                            borderRadius: BorderRadius.all(Radius.circular(6.5)),
-                                          ),
-                                          width: 263,
-                                          height: 17,
-                                        ),
-                                      ],
+                                  ),
+                                  Positioned.fill(
+                                    child: AspectRatio(
+                                      aspectRatio: 144 / 132,
+                                      child: Image.asset(
+                                        'assets/images/ellipse4.png',
+                                        fit: BoxFit.fill,
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 70,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: 112,
-                        right: 85,
-                      ),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: appColors.black,
-                          elevation: 0,
-                          padding: EdgeInsets.zero,
-                          side: BorderSide.none,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            side: BorderSide.none,
                           ),
-                        ),
-                        child: Text(
-                          '',
-                        ),
-                        onPressed: () {},
+                          SizedBox(height: 10),
+                          Center(
+                            child: Container(
+                              padding: EdgeInsets.only(left: 5),
+                              decoration: BoxDecoration(
+                                color: appColors.bone,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              margin: EdgeInsets.only(left: 20, right: 1),
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                  left: 2,
+                                  right: 41,
+                                ),
+                                child: TextField(
+                                  style: appTextStyles.textStyle16(
+                                    color: appColors.black,
+                                  ),
+                                  decoration: InputDecoration(
+                                    labelText:
+                                        'Provinsi, Kota, Kecamatan, Kode Pos',
+                                    labelStyle: appTextStyles.textStyle2(
+                                      color: appColors.black,
+                                    ),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Center(
+                            child: Container(
+                              padding: EdgeInsets.only(left: 5),
+                              decoration: BoxDecoration(
+                                color: appColors.bone,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              margin: EdgeInsets.only(left: 20, right: 1),
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                  left: 2,
+                                  right: 41,
+                                ),
+                                child: TextField(
+                                  style: appTextStyles.textStyle16(
+                                    color: appColors.black,
+                                  ),
+                                  decoration: InputDecoration(
+                                    labelText: 'Nama Jalan, Gedung, No. Rumah',
+                                    labelStyle: appTextStyles.textStyle2(
+                                      color: appColors.black,
+                                    ),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Center(
+                            child: Container(
+                              padding: EdgeInsets.only(left: 5),
+                              decoration: BoxDecoration(
+                                color: appColors.bone,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              margin: EdgeInsets.only(left: 20, right: 1),
+                              child: Padding(
+                                padding: EdgeInsets.only(
+                                  left: 2,
+                                  right: 41,
+                                ),
+                                child: TextField(
+                                  style: appTextStyles.textStyle16(
+                                    color: appColors.black,
+                                  ),
+                                  decoration: InputDecoration(
+                                    labelText:
+                                        'Detail Lain (Cth: Blok / Uni No., Patokan)',
+                                    labelStyle: appTextStyles.textStyle2(
+                                      color: appColors.black,
+                                    ),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(height: 120),
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 112),
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: appColors.black,
+                                    elevation: 0,
+                                    padding: EdgeInsets.zero,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    //
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 20),
+                                    child: Text(
+                                      'Selanjutnya',
+                                      style: TextStyle(fontSize: 12),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ],

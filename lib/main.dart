@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       onGenerateTitle: (context) => 'appTitle'.tr(),
       initialRoute: AppRoutes.init,
       onGenerateRoute: (settings) => AppRouter.generateRoute(settings),

@@ -1,10 +1,12 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class HalamanScreen extends StatelessWidget {
-  const HalamanScreen({Key? key}) : super(key: key);
+  const HalamanScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +29,9 @@ class HalamanScreen extends StatelessWidget {
           bottom: false,
           child: ListView(
             padding: EdgeInsets.only(
-              left: 20,
-              top: 12,
+              left: 15,
+              top: 15,
               right: 11,
-              bottom: 75,
             ),
             children: [
               Column(
@@ -44,92 +45,93 @@ class HalamanScreen extends StatelessWidget {
                       iconSize: 32,
                       padding: EdgeInsets.zero,
                       icon: Image.asset(
-                        'assets/images/frame18.png',
+                        'assets/images/frame19.png',
                       ),
                       onPressed: () {},
                       constraints: BoxConstraints(),
                     ),
                   ),
-                  SizedBox(
-                    height: 36,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: 105,
-                      right: 113,
-                    ),
-                    child: Image.asset(
-                      'assets/images/rectangle19.png',
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: 143,
-                      right: 143,
-                    ),
-                    child: Text(
-                      'cinta2'.tr(),
-                      style: appTextStyles.textStyle2(color: appColors.daisy),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 33,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: 107,
-                      right: 116,
-                    ),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: appColors.black,
-                        elevation: 0,
-                        padding: EdgeInsets.zero,
-                        side: BorderSide.none,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                          side: BorderSide.none,
-                        ),
-                      ),
-                      child: Text(
-                        '',
-                      ),
-                      onPressed: () {},
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      left: 132,
-                      right: 132,
-                    ),
-                    child: Row(
+                  Center(
+                    child: Column(
+                      mainAxisAlignment:
+                          MainAxisAlignment.center, // Pusatkan secara vertikal
                       children: [
-                        Image.asset(
-                          'assets/images/image2.png',
-                        ),
                         SizedBox(
-                          width: 6,
+                          height: 30,
                         ),
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            elevation: 0,
-                            padding: EdgeInsets.zero,
-                            alignment: Alignment.centerLeft,
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 105),
+                          child: Image.asset(
+                            'assets/images/rectangle19.png',
                           ),
-                          child: Text(
-                            'unduh'.tr(),
-                            style: appTextStyles.textStyle2(
-                                color: appColors.daisy),
-                            textAlign: TextAlign.left,
+                        ),
+                        Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 143),
+                                child: Text(
+                                  'CINTA'.tr(),
+                                  style: appTextStyles.textStyle2(
+                                      color: appColors.daisy),
+                                  textAlign: TextAlign.left,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 116),
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: appColors.black,
+                                    elevation: 0,
+                                    padding: EdgeInsets.zero,
+                                    side: BorderSide.none,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(5)),
+                                      side: BorderSide.none,
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Buku',
+                                  ),
+                                  onPressed: () {},
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal:
+                                        159), // Ubah nilai padding di sini
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/image2.png',
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Expanded(
+                                      child: TextButton(
+                                        style: TextButton.styleFrom(
+                                          elevation: 0,
+                                          padding: EdgeInsets.zero,
+                                          alignment: Alignment.centerLeft,
+                                        ),
+                                        child: Text(
+                                          'unduh'.tr(),
+                                          style: appTextStyles.textStyle2(
+                                              color: appColors.daisy),
+                                          textAlign: TextAlign.left,
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
-                          onPressed: () {},
                         ),
                       ],
                     ),
@@ -156,23 +158,13 @@ class HalamanScreen extends StatelessWidget {
                       left: 1,
                     ),
                     child: Text(
-                      'novel_ini_menceritakan_tentang_aspirasi_cinta_duni'.tr(),
+                      'Novel ini menceritakan tentang aspirasi cinta, dunia glamor yang dalamnya mempunyai 25 kisah kasih. Kisah-kisah ini diinspirasikan dari perbualan bersama Heliza Helmi, Diana Amir, Siti Nordiana, dan Farah Asyikin'
+                          .tr(),
                       style: appTextStyles.textStyle2(color: appColors.black),
                       textAlign: TextAlign.left,
                     ),
                   ),
                 ],
-              ),
-              SizedBox(
-                height: 18,
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 1),
-                child: Text(
-                  'buku'.tr(),
-                  style: appTextStyles.textStyle2(color: appColors.daisy),
-                  textAlign: TextAlign.left,
-                ),
               ),
             ],
           ),

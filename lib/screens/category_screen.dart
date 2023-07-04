@@ -38,74 +38,74 @@ class CategoryScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                                padding: EdgeInsets.only(
-                                  left: 14,
-                                  top: 6,
-                                  right: 7,
-                                  bottom: 10,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: appColors.rice,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5)),
-                                ),
-                                margin: EdgeInsets.only(
-                                  left: 23,
-                                  right: 19,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    LimitedBox(
-                                      maxHeight: 25,
-                                      child: Stack(
-                                        children: [
-                                          Positioned(
-                                            left: 0,
-                                            top: 0,
-                                            bottom: 0,
-                                            child: Image.asset(
-                                              'assets/images/frame7.png',
+                              padding: EdgeInsets.only(
+                                left: 14,
+                                top: 6,
+                                right: 7,
+                                bottom: 10,
+                              ),
+                              decoration: BoxDecoration(
+                                color: appColors.rice,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5)),
+                              ),
+                              margin: EdgeInsets.only(
+                                left: 23,
+                                right: 19,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  LimitedBox(
+                                    maxHeight: 25,
+                                    child: Stack(
+                                      children: [
+                                        Positioned(
+                                          left: 0,
+                                          top: 0,
+                                          bottom: 0,
+                                          child: Image.asset(
+                                            'assets/images/frame7.png',
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                            left: 38,
+                                            right: 38,
+                                          ),
+                                          child: Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Text(
+                                              'cari buku',
+                                              style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    255, 122, 120, 120),
+                                              ),
+                                              textAlign: TextAlign.left,
                                             ),
                                           ),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                              left: 38,
-                                              right: 38,
-                                            ),
-                                            child: Align(
-                                              alignment: Alignment.centerLeft,
-                                              child: Text(
-                                                'cari buku',
-                                                style: TextStyle(
-                                                  color: Color.fromARGB(
-                                                      255, 122, 120, 120),
-                                                ),
-                                                textAlign: TextAlign.left,
+                                        ),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          child: LimitedBox(
+                                            maxHeight: 1,
+                                            child: AspectRatio(
+                                              aspectRatio: 302.006591796875 / 1,
+                                              child: Image.asset(
+                                                'assets/images/line6.png',
+                                                fit: BoxFit.fill,
                                               ),
                                             ),
                                           ),
-                                          Positioned(
-                                            left: 0,
-                                            right: 0,
-                                            bottom: 0,
-                                            child: LimitedBox(
-                                              maxHeight: 1,
-                                              child: AspectRatio(
-                                                aspectRatio:
-                                                    302.006591796875 / 1,
-                                                child: Image.asset(
-                                                  'assets/images/line6.png',
-                                                  fit: BoxFit.fill,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
-                                )),
+                                  ),
+                                ],
+                              ),
+                            ),
                             SizedBox(
                               height: 15,
                             ),

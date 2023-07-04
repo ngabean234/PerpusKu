@@ -10,10 +10,16 @@ import 'package:google_fonts/google_fonts.dart';
 // }
 /// ```
 abstract class MHAppTextStyles {
+  TextStyle textStyle({Color? color}) =>
+      GoogleFonts.itim(fontSize: 20.0, fontWeight: FontWeight.w400);
+  TextStyle textStyle10({Color? color}) =>
+      GoogleFonts.inter(fontSize: 16.0, fontWeight: FontWeight.w700);
   TextStyle textStyle11({Color? color}) => GoogleFonts.inter(
       fontSize: 12.0, fontWeight: FontWeight.w300, color: color);
   TextStyle textStyle12({Color? color}) => GoogleFonts.inter(
       fontSize: 20.0, fontWeight: FontWeight.w400, color: color);
+  TextStyle textStyle13({Color? color}) =>
+      GoogleFonts.inter(fontSize: 12.0, fontWeight: FontWeight.w400);
   TextStyle textStyle14({Color? color}) => GoogleFonts.outfit(
       fontSize: 20.0, fontWeight: FontWeight.w400, color: color);
   TextStyle textStyle15({Color? color}) => GoogleFonts.outfit(
@@ -27,7 +33,12 @@ abstract class MHAppTextStyles {
   TextStyle textStyle19({Color? color}) => GoogleFonts.outfit(
       fontSize: 10.0, fontWeight: FontWeight.w700, color: color);
   TextStyle textStyle2({Color? color}) => GoogleFonts.inter(
-      fontSize: 16.0, fontWeight: FontWeight.w400, color: color);
+        fontWeight: FontWeight.w400,
+        color: color,
+      );
+  TextStyle textStyle4({Color? color}) =>
+      GoogleFonts.inter(fontSize: 13.0, fontWeight: FontWeight.w100);
+
   TextStyle textStyle5({Color? color}) => GoogleFonts.inter(
       fontSize: 13.0, fontWeight: FontWeight.w400, color: color);
   TextStyle textStyle6({Color? color}) => GoogleFonts.inter(
@@ -41,9 +52,6 @@ abstract class MHAppTextStyles {
       fontSize: 20.0, fontWeight: FontWeight.w500, color: color);
   TextStyle textStyle9({Color? color}) => GoogleFonts.inter(
       fontSize: 24.0, fontWeight: FontWeight.w500, color: color);
-  TextStyle textStyle4 = TextStyle(
-    fontSize: 16.0,
-    fontWeight: FontWeight.bold,
-    color: Colors.black,
-  );
+  TextStyle textStyle3({Color? color}) =>
+      GoogleFonts.inter(fontSize: 20.0, fontWeight: FontWeight.w500);
 }
