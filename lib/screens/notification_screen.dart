@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mondayhero_starter_project/screens/category_screen.dart';
+import 'package:mondayhero_starter_project/screens/download_screen.dart';
+import 'package:mondayhero_starter_project/screens/halaman_utama_screen.dart';
+import 'package:mondayhero_starter_project/screens/profil_screen.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -61,7 +65,7 @@ class NotificationScreen extends StatelessWidget {
                           padding: EdgeInsets.only(
                             left: 20,
                           ),
-                          child: Container(
+                          child: SizedBox(
                             width: 60,
                             height: 60,
                             child: Image.asset(
@@ -121,7 +125,15 @@ class NotificationScreen extends StatelessWidget {
                             icon: Image.asset(
                               'assets/images/frame6.png',
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      HalamanUtamaScreen(), // Replace with appropriate screen widget
+                                ),
+                              );
+                            },
                             constraints: BoxConstraints(),
                           ),
                           SizedBox(
@@ -133,7 +145,15 @@ class NotificationScreen extends StatelessWidget {
                             icon: Image.asset(
                               'assets/images/frame7.png',
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      CategoryScreen(), // Replace with appropriate screen widget
+                                ),
+                              );
+                            },
                             constraints: BoxConstraints(),
                           ),
                           SizedBox(
@@ -145,7 +165,15 @@ class NotificationScreen extends StatelessWidget {
                             icon: Image.asset(
                               'assets/images/frame8.png',
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      DownloadScreen(), // Replace with appropriate screen widget
+                                ),
+                              );
+                            },
                             constraints: BoxConstraints(),
                           ),
                           SizedBox(
@@ -157,7 +185,7 @@ class NotificationScreen extends StatelessWidget {
                             icon: Image.asset(
                               'assets/images/frame9.png',
                             ),
-                            onPressed: () {},
+                            onPressed: (null),
                             constraints: BoxConstraints(),
                           ),
                           SizedBox(
@@ -169,7 +197,15 @@ class NotificationScreen extends StatelessWidget {
                             icon: Image.asset(
                               'assets/images/usercircle2.png',
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      ProfilScreen(), // Replace with appropriate screen widget
+                                ),
+                              );
+                            },
                             constraints: BoxConstraints(),
                           ),
                         ],

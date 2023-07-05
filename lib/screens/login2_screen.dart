@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mondayhero_starter_project/screens/book_screen.dart';
 
 import 'package:mondayhero_starter_project/screens/daftar_screen.dart';
+import 'package:mondayhero_starter_project/screens/halaman_utama_screen.dart';
 
-import 'package:mondayhero_starter_project/screens/pinjaman_screen.dart';
-import 'package:mondayhero_starter_project/screens/profil_screen.dart';
-import 'package:mondayhero_starter_project/screens/setting_profil_screen.dart';
 
 class Login2Screen extends StatelessWidget {
   const Login2Screen({Key? key}) : super(key: key);
@@ -258,7 +255,7 @@ class Login2Screen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  BookScreen(), // Replace with appropriate screen widget
+                                  HalamanUtamaScreen(), // Replace with appropriate screen widget
                             ),
                           );
                         },

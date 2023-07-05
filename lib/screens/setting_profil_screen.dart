@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:mondayhero_starter_project/screens/profil_screen.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -46,7 +46,15 @@ class SettingProfilScreen extends StatelessWidget {
                         icon: Image.asset(
                           'assets/images/frame114.png',
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ProfilScreen(), // Replace with appropriate screen widget
+                            ),
+                          );
+                        },
                         constraints: BoxConstraints(),
                       ),
                       SizedBox(
@@ -297,7 +305,15 @@ class SettingProfilScreen extends StatelessWidget {
                       child: Text(
                         'Simpan',
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ProfilScreen(), // Replace with appropriate screen widget
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ],

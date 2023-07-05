@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:mondayhero_starter_project/screens/category_screen.dart';
+import 'package:mondayhero_starter_project/screens/download_screen.dart';
+import 'package:mondayhero_starter_project/screens/halaman_utama_screen.dart';
+import 'package:mondayhero_starter_project/screens/kembali_screen.dart';
+import 'package:mondayhero_starter_project/screens/notification_screen.dart';
+import 'package:mondayhero_starter_project/screens/profil_screen.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -34,7 +39,7 @@ class PinjamanScreen extends StatelessWidget {
               padding: EdgeInsets.only(
                 top: 15,
               ),
-              child: Container(
+              child: SizedBox(
                 width: double
                     .infinity, // Set width to take up the full available width
                 child: Expanded(
@@ -89,7 +94,15 @@ class PinjamanScreen extends StatelessWidget {
                                             color: appColors.black),
                                         textAlign: TextAlign.left,
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                DownloadScreen(), // Replace with appropriate screen widget
+                                          ),
+                                        );
+                                      },
                                     ),
                                     SizedBox(
                                       width: 40,
@@ -115,7 +128,15 @@ class PinjamanScreen extends StatelessWidget {
                                             color: appColors.black),
                                         textAlign: TextAlign.left,
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                KembaliScreen(), // Replace with appropriate screen widget
+                                          ),
+                                        );
+                                      },
                                     ),
                                   ],
                                 ),
@@ -219,7 +240,15 @@ class PinjamanScreen extends StatelessWidget {
                                 icon: Image.asset(
                                   'assets/images/frame6.png',
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          HalamanUtamaScreen(), // Replace with appropriate screen widget
+                                    ),
+                                  );
+                                },
                                 constraints: BoxConstraints(),
                               ),
                               SizedBox(
@@ -231,7 +260,15 @@ class PinjamanScreen extends StatelessWidget {
                                 icon: Image.asset(
                                   'assets/images/frame7.png',
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          CategoryScreen(), // Replace with appropriate screen widget
+                                    ),
+                                  );
+                                },
                                 constraints: BoxConstraints(),
                               ),
                               SizedBox(
@@ -255,7 +292,15 @@ class PinjamanScreen extends StatelessWidget {
                                 icon: Image.asset(
                                   'assets/images/frame9.png',
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          NotificationScreen(), // Replace with appropriate screen widget
+                                    ),
+                                  );
+                                },
                                 constraints: BoxConstraints(),
                               ),
                               SizedBox(
@@ -267,7 +312,15 @@ class PinjamanScreen extends StatelessWidget {
                                 icon: Image.asset(
                                   'assets/images/usercircle2.png',
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          ProfilScreen(), // Replace with appropriate screen widget
+                                    ),
+                                  );
+                                },
                                 constraints: BoxConstraints(),
                               ),
                             ],

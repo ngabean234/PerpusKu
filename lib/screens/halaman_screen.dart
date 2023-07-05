@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mondayhero_starter_project/screens/download_screen.dart';
+import 'package:mondayhero_starter_project/screens/halaman_book_screen.dart';
+import 'package:mondayhero_starter_project/screens/halaman_utama_screen.dart';
+import 'package:mondayhero_starter_project/screens/pinjam_screen.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -47,7 +51,15 @@ class HalamanScreen extends StatelessWidget {
                       icon: Image.asset(
                         'assets/images/frame19.png',
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                HalamanUtamaScreen(), // Replace with appropriate screen widget
+                          ),
+                        );
+                      },
                       constraints: BoxConstraints(),
                     ),
                   ),
@@ -95,7 +107,15 @@ class HalamanScreen extends StatelessWidget {
                                   child: Text(
                                     'Buku',
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            HalamanBookScreen(), // Replace with appropriate screen widget
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
                               Padding(
@@ -124,7 +144,55 @@ class HalamanScreen extends StatelessWidget {
                                               color: appColors.daisy),
                                           textAlign: TextAlign.left,
                                         ),
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  DownloadScreen(), // Replace with appropriate screen widget
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal:
+                                        159), // Ubah nilai padding di sini
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/image7.png',
+                                    ),
+                                    SizedBox(
+                                      width: 2,
+                                    ),
+                                    Expanded(
+                                      child: TextButton(
+                                        style: TextButton.styleFrom(
+                                          elevation: 0,
+                                          padding: EdgeInsets.zero,
+                                          alignment: Alignment.centerLeft,
+                                        ),
+                                        child: Text(
+                                          'Pinjam'.tr(),
+                                          style: appTextStyles.textStyle2(
+                                              color: appColors.daisy),
+                                          textAlign: TextAlign.left,
+                                        ),
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  PinjamScreen(), // Replace with appropriate screen widget
+                                            ),
+                                          );
+                                        },
                                       ),
                                     ),
                                   ],

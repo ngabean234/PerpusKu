@@ -1,5 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:mondayhero_starter_project/screens/halaman_screen.dart';
+import 'package:mondayhero_starter_project/screens/isi_profile_screen.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 
@@ -40,7 +42,15 @@ class PinjamScreen extends StatelessWidget {
                       icon: Image.asset(
                         'assets/images/frame19.png',
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                HalamanScreen(), // Replace with appropriate screen widget
+                          ),
+                        );
+                      },
                       constraints: BoxConstraints(),
                     ),
                   ],
@@ -257,7 +267,15 @@ class PinjamScreen extends StatelessWidget {
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                IsiProfileScreen(), // Replace with appropriate screen widget
+                          ),
+                        );
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 2.9,

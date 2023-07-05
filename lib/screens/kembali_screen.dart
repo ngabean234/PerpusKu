@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mondayhero_starter_project/screens/category_screen.dart';
+import 'package:mondayhero_starter_project/screens/download_screen.dart';
+import 'package:mondayhero_starter_project/screens/halaman_utama_screen.dart';
+import 'package:mondayhero_starter_project/screens/notification_screen.dart';
+import 'package:mondayhero_starter_project/screens/pinjaman_screen.dart';
+import 'package:mondayhero_starter_project/screens/profil_screen.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -82,7 +88,15 @@ class KembaliScreen extends StatelessWidget {
                                         color: appColors.black),
                                     textAlign: TextAlign.left,
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            DownloadScreen(), // Replace with appropriate screen widget
+                                      ),
+                                    );
+                                  },
                                 ),
                                 SizedBox(
                                   width: 30,
@@ -99,7 +113,15 @@ class KembaliScreen extends StatelessWidget {
                                         color: appColors.black),
                                     textAlign: TextAlign.left,
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            PinjamanScreen(), // Replace with appropriate screen widget
+                                      ),
+                                    );
+                                  },
                                 ),
                                 SizedBox(
                                   width: 30,
@@ -174,7 +196,15 @@ class KembaliScreen extends StatelessWidget {
                               icon: Image.asset(
                                 'assets/images/frame6.png',
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        HalamanUtamaScreen(), // Replace with appropriate screen widget
+                                  ),
+                                );
+                              },
                               constraints: BoxConstraints(),
                             ),
                             SizedBox(
@@ -186,7 +216,15 @@ class KembaliScreen extends StatelessWidget {
                               icon: Image.asset(
                                 'assets/images/frame7.png',
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        CategoryScreen(), // Replace with appropriate screen widget
+                                  ),
+                                );
+                              },
                               constraints: BoxConstraints(),
                             ),
                             SizedBox(
@@ -210,7 +248,15 @@ class KembaliScreen extends StatelessWidget {
                               icon: Image.asset(
                                 'assets/images/frame9.png',
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        NotificationScreen(), // Replace with appropriate screen widget
+                                  ),
+                                );
+                              },
                               constraints: BoxConstraints(),
                             ),
                             SizedBox(
@@ -222,7 +268,15 @@ class KembaliScreen extends StatelessWidget {
                               icon: Image.asset(
                                 'assets/images/usercircle2.png',
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        ProfilScreen(), // Replace with appropriate screen widget
+                                  ),
+                                );
+                              },
                               constraints: BoxConstraints(),
                             ),
                           ],

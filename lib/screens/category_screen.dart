@@ -1,5 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:mondayhero_starter_project/screens/download_screen.dart';
+import 'package:mondayhero_starter_project/screens/halaman_utama_screen.dart';
+import 'package:mondayhero_starter_project/screens/notification_screen.dart';
+import 'package:mondayhero_starter_project/screens/profil_screen.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 
@@ -512,7 +516,15 @@ class CategoryScreen extends StatelessWidget {
                                       icon: Image.asset(
                                         'assets/images/frame6.png',
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                HalamanUtamaScreen(), // Replace with appropriate screen widget
+                                          ),
+                                        );
+                                      },
                                       constraints: BoxConstraints(),
                                     ),
                                     SizedBox(
@@ -524,7 +536,7 @@ class CategoryScreen extends StatelessWidget {
                                       icon: Image.asset(
                                         'assets/images/frame7.png',
                                       ),
-                                      onPressed: () {},
+                                      onPressed: (null),
                                       constraints: BoxConstraints(),
                                     ),
                                     SizedBox(
@@ -536,7 +548,15 @@ class CategoryScreen extends StatelessWidget {
                                       icon: Image.asset(
                                         'assets/images/frame8.png',
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                DownloadScreen(), // Replace with appropriate screen widget
+                                          ),
+                                        );
+                                      },
                                       constraints: BoxConstraints(),
                                     ),
                                     SizedBox(
@@ -548,7 +568,15 @@ class CategoryScreen extends StatelessWidget {
                                       icon: Image.asset(
                                         'assets/images/frame9.png',
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                NotificationScreen(), // Replace with appropriate screen widget
+                                          ),
+                                        );
+                                      },
                                       constraints: BoxConstraints(),
                                     ),
                                     SizedBox(
@@ -560,7 +588,15 @@ class CategoryScreen extends StatelessWidget {
                                       icon: Image.asset(
                                         'assets/images/usercircle2.png',
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ProfilScreen(), // Replace with appropriate screen widget
+                                          ),
+                                        );
+                                      },
                                       constraints: BoxConstraints(),
                                     ),
                                   ],

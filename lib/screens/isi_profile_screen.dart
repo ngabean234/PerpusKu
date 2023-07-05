@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mondayhero_starter_project/screens/alamat_screen.dart';
+import 'package:mondayhero_starter_project/screens/pinjam_screen.dart';
 import 'package:mondayhero_starter_project/theme/app_text_styles.dart';
 import 'package:mondayhero_starter_project/theme/app_colors.dart';
 
@@ -45,7 +47,15 @@ class IsiProfileScreen extends StatelessWidget {
                         icon: Image.asset(
                           'assets/images/frame19.png',
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  PinjamScreen(), // Replace with appropriate screen widget
+                            ),
+                          );
+                        },
                       ),
                     ),
                     Container(
@@ -200,7 +210,13 @@ class IsiProfileScreen extends StatelessWidget {
                                     ),
                                   ),
                                   onPressed: () {
-                                    //
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            AlamatScreen(), // Replace with appropriate screen widget
+                                      ),
+                                    );
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
